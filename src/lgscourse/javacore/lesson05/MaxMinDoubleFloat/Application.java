@@ -1,4 +1,4 @@
-package lgscourse.javacore.lesson05.MaxAndMinDoubleFloat;
+package lgscourse.javacore.lesson05.MaxMinDoubleFloat;
 
 public class Application {
 
