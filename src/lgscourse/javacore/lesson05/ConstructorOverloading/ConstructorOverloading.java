@@ -1,4 +1,4 @@
-package lgscourse.javacore.lesson05ConstructorOverloading;
+package lgscourse.javacore.lesson05.ConstructorOverloading;
 
 public class ConstructorOverloading {
 	private int a;
