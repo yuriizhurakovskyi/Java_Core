@@ -32,6 +32,7 @@ public class Application {
 				System.out.println("Некоректний ввід.");
 			}
 		}while(true);
+		scanner.close();
 	}
 	
 	public static void showMenu() {

@@ -1,6 +1,5 @@
 package lgscourse.javacore.lesson12.MyArrayList;
 
-import java.util.Arrays;
 
 public class MyArrayList<T> {
 	private final int SIZE = 10;

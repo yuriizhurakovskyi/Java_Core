@@ -1,6 +1,5 @@
 package lgscourse.javacore.lesson12.Seasons;
 
-import java.time.Month;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -164,6 +163,7 @@ public class Main {
 				else displayMonthAnEvenOrAnOddNumberOfDays(monthS);
 				break;
 			case "exit":
+				scanner.close();
 				System.exit(0);
 				break;
 			default:
