@@ -3,13 +3,13 @@ package lgscourse.javacore.lesson12.MyArrayList;
 import java.util.Arrays;
 
 public class MyArrayList<T> {
-	private final int SIZE = 20;
+	private final int SIZE = 10;
 	private Object[] array = new Object[SIZE];
 	private int sP = 0;
 	
 	public void add(T item) {
 		if(sP == array.length - 1) {
-			Object[] array2 = new Object[array.length * 2];
+			Object[] array2 = new Object[array.length + 10];
 			 System.arraycopy(array, 0, array2, 0, sP);
 		      array = array2;
 		}
@@ -23,9 +23,8 @@ public class MyArrayList<T> {
 			 array[i] = array[i+1];
 		 array[sP] = null;
 		 sP--;
-		 if(array.length > SIZE && sP < SIZE)
-		 {
-			 Object[] array3 = new Object[array.length / 2];
+		 if((array.length-sP)>=10){
+			 Object[] array3 = new Object[array.length - 10];
 			 System.arraycopy(array, 0, array3, 0, sP);
 		 }
 		 return true;
