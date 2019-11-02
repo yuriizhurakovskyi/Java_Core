@@ -1,11 +1,11 @@
-package lgscourse.javacore.lesson11.MyArrayList;
+package lgscourse.javacore.lesson12.MyArrayList;
 
 import java.util.Random;
 
-import lgscourse.javacore.lesson11.CarsArrayLists.Car;
-import lgscourse.javacore.lesson11.CarsArrayLists.Engine;
-import lgscourse.javacore.lesson11.CarsArrayLists.Material;
-import lgscourse.javacore.lesson11.CarsArrayLists.SteeringWheel;
+import lgscourse.javacore.lesson12.CarsArrayLists.Car;
+import lgscourse.javacore.lesson12.CarsArrayLists.Engine;
+import lgscourse.javacore.lesson12.CarsArrayLists.Material;
+import lgscourse.javacore.lesson12.CarsArrayLists.SteeringWheel;
 
 public class Main {
 

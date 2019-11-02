@@ -1,4 +1,4 @@
-package lgscourse.javacore.lesson11.Seasons;
+package lgscourse.javacore.lesson12.Seasons;
 
 public enum Months {
 	JANUARY(31, Seasons.WINTER), FEBRUARY(29, Seasons.WINTER), MARCH(31, Seasons.SPRING),

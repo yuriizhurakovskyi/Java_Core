@@ -1,4 +1,4 @@
-package lgscourse.javacore.lesson11.Seasons;
+package lgscourse.javacore.lesson12.Seasons;
 
 import java.time.Month;
 import java.util.ArrayList;

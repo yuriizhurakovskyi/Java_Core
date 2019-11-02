@@ -1,4 +1,4 @@
-package lgscourse.javacore.lesson11.SortedIntegers;
+package lgscourse.javacore.lesson12.SortedIntegers;
 
 import java.util.ArrayList;
 import java.util.Arrays;

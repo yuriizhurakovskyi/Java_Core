@@ -1,4 +1,4 @@
-package lgscourse.javacore.lesson11.MyArrayList;
+package lgscourse.javacore.lesson12.MyArrayList;
 
 import java.util.Arrays;
 

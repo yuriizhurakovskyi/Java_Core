@@ -1,4 +1,4 @@
-package lgscourse.javacore.lesson11.CarsArrayLists;
+package lgscourse.javacore.lesson12.CarsArrayLists;
 
 import java.util.ArrayList;
 import java.util.Arrays;
