@@ -1,5 +1,6 @@
 package lgscourse.javacore.lesson11.SortedIntegers;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
@@ -7,18 +8,18 @@ import java.util.Random;
 public class Application {
 
 	public static void main(String[] args) {
-		Integer[] array = new Integer[20];
+		ArrayList<Integer> array = new ArrayList<Integer>();
 		fillRandomIntegerArray(array);
-		System.out.println("Array " + Arrays.toString(array));
-		Arrays.sort(array, Collections.reverseOrder());
-		System.out.println("DESC " + Arrays.toString(array));
-		Arrays.sort(array);
-		System.out.println("ASC " + Arrays.toString(array));
+		System.out.println("Array " + Arrays.toString(array.toArray()));
+		array.sort(Collections.reverseOrder());
+		System.out.println("DESC " + Arrays.toString(array.toArray()));
+		array.sort(null);;
+		System.out.println("ASC " + Arrays.toString(array.toArray()));
 	}
 	
-	public static void fillRandomIntegerArray(Integer[] array) {
-		for (int i = 0; i < array.length; i++) {
-			array[i] = new Random().nextInt(201)-100;					
+	public static void fillRandomIntegerArray(ArrayList<Integer> array ) {
+		for (int i = 0; i < 20; i++) {
+			array.add(new Random().nextInt(201)-100);
 		}
 	}
 }

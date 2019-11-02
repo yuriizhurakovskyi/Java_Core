@@ -1,5 +1,6 @@
-package lgscourse.javacore.lesson11.CarsArrays;
+package lgscourse.javacore.lesson11.CarsArrayLists;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -7,7 +8,7 @@ import java.util.Scanner;
 public class Application {
 
 	public static void main(String[] args) {
-		Car[][] cars = getNewRandomSizeNullCarArray();
+		ArrayList <ArrayList<Car>> cars = new ArrayList <ArrayList<Car>> ();
 		fillRandomCarArray(cars);
 		
 		Scanner scanner = new Scanner(System.in);
@@ -41,36 +42,42 @@ public class Application {
 		System.out.println("exit - щоб вийти");
 	}
 	
-	public static Car[][] getNewRandomSizeNullCarArray() {
-		return new Car[new Random().nextInt(100)+1][new Random().nextInt(100)+1];
+	
+	public static void showCars(ArrayList<ArrayList<Car>> cars) {
+		System.out.println("\n\n\n");
+		for (int i = 0; i < cars.size(); i++) {
+			System.out.println(Arrays.deepToString(cars.get(i).toArray()));
+		}
+		System.out.println("\n\n\n");
 	}
 	
-	public static void showCars(Car[][] cars) {
-		System.out.println("\n\n\n");
-		System.out.println(Arrays.deepToString(cars));
-		System.out.println("\n\n\n");
-	}
-	
-	public static void fillRandomCarArray(Car[][] cars) {
+	public static void fillRandomCarArray(ArrayList<ArrayList<Car>> cars) {
 		Random random = new Random();
-		for (int i = 0; i < cars.length; i++) {
-			for (int j = 0; j < cars[i].length; j++) {
-				cars[i][j] = new Car(random.nextInt(110-45+1)+45,
+		int size1 = random.nextInt(100) + 1, size2 = 0;
+		for (int i = 0; i < size1; i++) {
+			cars.add(new ArrayList<Car>());
+		}
+		for (int k = 0; k < cars.size(); k++) {
+			size2 = random.nextInt(100) + 1;
+			for (int j = 0; j < size2; j++) {
+				cars.get(k).add( new Car(random.nextInt(110-45+1)+45,
 						random.nextInt(2019-2000+1)+2000, 
 						new SteeringWheel(random.nextInt(49-35+1)+35, Material.values()[random.nextInt(2)]),
-						new Engine(random.nextInt(16-2+1)+2));
+						new Engine(random.nextInt(16-2+1)+2)));
 			}
 		}
 	}
-	
-	public static void fillOneRandomCarArray(Car[][] cars) {
+	public static void fillOneRandomCarArray(ArrayList<ArrayList<Car>> cars) {
 		Random random = new Random();
 		Car car = new Car(random.nextInt(110-45+1)+45,
 				random.nextInt(2019-2000+1)+2000, 
 				new SteeringWheel(random.nextInt(49-35+1)+35, Material.values()[random.nextInt(2)]),
 				new Engine(random.nextInt(16-2+1)+2));
-		for (int i = 0; i < cars.length; i++) {
-			Arrays.fill(cars[i], car);
+		for (int i = 0; i < cars.size(); i++) {
+			for (int j = 0; j < cars.get(i).size(); j++) {
+				cars.get(i).remove(j);
+				cars.get(i).add(j, car);
+			}
 		}
 	}
 }

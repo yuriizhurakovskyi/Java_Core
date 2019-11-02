@@ -1,4 +1,4 @@
-package lgscourse.javacore.lesson11.CarsArrays;
+package lgscourse.javacore.lesson11.CarsArrayLists;
 
 public class Car {
 	private int horsepower;
