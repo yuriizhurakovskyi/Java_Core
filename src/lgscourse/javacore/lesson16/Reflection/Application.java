@@ -92,20 +92,25 @@ public class Application {
 		System.out.println();
 		
 		System.out.println("Class Application methods : ");
-		Method[] methods = Application.class.getMethods();
-		for (int i = 0; i < Application.class.getMethods().length; i++) {
-			System.out.println("index {" + i + "}" + methods[i]);
+		Class<Application> classAPP = Application.class;
+		Method[] methods = classAPP.getMethods();
+		for (int i = 0; i < methods.length; i++) {
+			System.out.println(methods[i]);
 		}
 		System.out.println();
+			
+		System.out.println();
 		
-		try {
-			methods[2].invoke(Application.class.newInstance(),"Hi. This is myMethod(String a, int ... args)", 10, 11, 2019);
-			methods[1].invoke(Application.class.newInstance(), "Hi. This is myMethod String... args");
-		} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-			e.printStackTrace();
-		} catch (InstantiationException e) {
-			e.printStackTrace();
-		}
+			try {
+				Application app = Application.class.newInstance();
+				Method method1 = classAPP.getMethod("myMethod", java.lang.String[].class);
+				Method method2 = classAPP.getMethod("myMethod", java.lang.String.class, int[].class);
+				System.out.println(method1);
+				System.out.println(method2);
+			} catch (InstantiationException | IllegalAccessException | NoSuchMethodException | SecurityException e) {
+				e.printStackTrace();
+			}
+		
 		
 	}
 	
@@ -116,5 +121,4 @@ public class Application {
 	public void myMethod(String... args) {
 		System.out.println("myMethod(String... args) String... args = " + Arrays.toString(args));	
 	}
-
 }

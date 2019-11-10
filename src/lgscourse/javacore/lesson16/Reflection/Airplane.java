@@ -126,5 +126,5 @@ public class Airplane extends Aircraft implements Serializable, Comparable<Airpl
 	public String toString() {
 		return "Airplane [name=" + name + ", weight=" + emptyWeight + ", size=" + length + ", speed=" + maxSpeed + "]";
 	}
-	
+
 }
