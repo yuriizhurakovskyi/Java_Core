@@ -1,7 +1,6 @@
 package lgscourse.javacore.lesson16.Reflection;
 
 import java.io.Serializable;
-import java.util.Arrays;
 
 public class Airplane extends Aircraft implements Serializable, Comparable<Airplane> {
 	/**
