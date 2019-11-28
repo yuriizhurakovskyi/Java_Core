@@ -7,13 +7,9 @@ public class Application {
 		Pets cat = () -> System.out.println("ί κ³ς- Μÿσσσ-Μÿσσσ");
 		Pets dog = () -> System.out.println("ί οερ- Γΰσσσ-Γΰσσσ");
 		
-		voice(cow);
-		voice(cat);
-		voice(dog);
-	}
-	
-	private static void voice(Pets pet) {
-		pet.voice();
+		cow.voice();
+		cat.voice();
+		dog.voice();
 	}
 
 }
